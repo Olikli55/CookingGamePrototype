@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://sopnhvwqr008"]
+
+[ext_resource type="Script" uid="uid://lehrjgl7xqy4" path="res://Scripts/draggable_component.gd" id="1_m0lyo"]
+
+[node name="DraggableComponent" type="Node2D" unique_id=210585027 node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_m0lyo")
+hitbox = NodePath("")
