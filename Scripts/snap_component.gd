@@ -1,33 +1,46 @@
+class_name SnapComponent
 extends Node2D
 
-@export var parent:Node2D
-@export var hitbox:Area2D
-var snap:bool = false
+var enabled:bool = true
+@export var parent:Node2D;
+@export var hitbox:Area2D;
+@export var snapPointGrupName:String;
+@export var dragComponent:DraggableComponent;
+@export var movmentComponent:MovmentComponent;
+
+var snap:bool = false;
+signal snapped
 var snapObject:Area2D;
-# Called when the node enters the scene tree for the first time.
 
 
 
 func _ready() -> void:
-	hitbox.area_entered.connect(_areaEntered)
-	hitbox.area_exited.connect(_areaExited)
+	parent = self.get_parent()
+	hitbox.area_entered.connect(_areaEntered);
+	hitbox.area_exited.connect(_areaExited);
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if snap: 
-		var snapPos:Vector2 = snapObject.find_child("CoverPos", false).global_position
-		if snapPos.distance_to(get_global_mouse_position()) < 20:
-			parent.global_position = snapObject.find_child("CoverPos", false).global_position
-	print(snap)
+		var snapPos:Vector2 = snapObject.find_child("snapPoint", false).global_position;
+		
+		if dragComponent.isPickedUp and snapPos.distance_to(get_global_mouse_position()) > 20:
+			return
+		
+		parent.global_position = snapPos
+		if Input.is_action_just_released("Dragg"): snapped.emit()
+		
+		
+
 
 
 func _areaExited(area:Area2D) -> void:
-	if area.get_groups().has("PotCoverSnapPos"):
-		snap = false
+	if area.get_groups().has(snapPointGrupName):
+		snap = false;
 
 func _areaEntered(area:Area2D) -> void:
-	if area.get_groups().has("PotCoverSnapPos"):
-		snap = true
-		snapObject = area 
+	if area.get_groups().has(snapPointGrupName) and enabled and dragComponent.isPickedUp:
+		snap = true;
+		snapObject = area;
+		print("ff")
 		

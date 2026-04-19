@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dy6sgkcan5iik"]
+
+[ext_resource type="Script" uid="uid://dr8magg0empex" path="res://ingredient.gd" id="1_vp2j4"]
+[ext_resource type="Resource" uid="uid://d3pe1xlukqehp" path="res://Resources/Ingredients/Carrot.tres" id="2_dii2p"]
+[ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="2_pc44i"]
+[ext_resource type="Texture2D" uid="uid://t4wc06ltsc0t" path="res://Assets/Potato.png" id="3_dii2p"]
+[ext_resource type="PackedScene" uid="uid://dksjqvol5yloi" path="res://Scenes/snap_component.tscn" id="3_pc44i"]
+[ext_resource type="PackedScene" uid="uid://cwrsvkjxxyphm" path="res://Scenes/movment_component.tscn" id="5_ww4r6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp2j4"]
+size = Vector2(32, 16)
+
+[node name="Ingredient" type="Node2D" unique_id=478603334 node_paths=PackedStringArray("texture", "snapComponent")]
+script = ExtResource("1_vp2j4")
+texture = NodePath("Texture")
+snapComponent = NodePath("SnapComponent")
+ingredient = ExtResource("2_dii2p")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1591209235]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_dii2p")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=850231425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1055509622]
+visible = false
+shape = SubResource("RectangleShape2D_vp2j4")
+
+[node name="DraggableComponent" parent="." unique_id=210585027 node_paths=PackedStringArray("hitbox", "movmentComponent") instance=ExtResource("2_pc44i")]
+hitbox = NodePath("../Hitbox")
+movmentComponent = NodePath("../MovmentComponent")
+
+[node name="SnapComponent" parent="." unique_id=1225860492 node_paths=PackedStringArray("parent", "hitbox", "dragComponent", "movmentComponent") instance=ExtResource("3_pc44i")]
+parent = NodePath("..")
+hitbox = NodePath("../Hitbox")
+snapPointGrupName = "IngredientSnapPoint"
+dragComponent = NodePath("../DraggableComponent")
+movmentComponent = NodePath("../MovmentComponent")
+
+[node name="MovmentComponent" parent="." unique_id=216014733 instance=ExtResource("5_ww4r6")]
+
+[connection signal="snapped" from="SnapComponent" to="." method="_on_snap_component_snapped"]

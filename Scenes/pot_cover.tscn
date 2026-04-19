@@ -2,12 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cq8nvf4esjk7g" path="res://Assets/CookingPotLid.png" id="1_ejybr"]
 [ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="2_nysfw"]
-[ext_resource type="Script" uid="uid://t3aibrkvbqqw" path="res://Scripts/snap_component.gd" id="3_xxkfc"]
+[ext_resource type="PackedScene" uid="uid://dksjqvol5yloi" path="res://Scenes/snap_component.tscn" id="3_xxkfc"]
+[ext_resource type="PackedScene" uid="uid://cwrsvkjxxyphm" path="res://Scenes/movment_component.tscn" id="4_xdoqc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nysfw"]
-size = Vector2(62, 18)
+size = Vector2(64, 16)
 
-[node name="PotCover" type="Node2D" unique_id=171613539]
+[node name="PotCover" type="Node2D" unique_id=171613539 groups=["PotCover"]]
 
 [node name="HitboxCover" type="Area2D" parent="." unique_id=1504862325]
 collision_layer = 2
@@ -18,11 +19,15 @@ shape = SubResource("RectangleShape2D_nysfw")
 [node name="CookingPotLid" type="Sprite2D" parent="." unique_id=655296375]
 texture = ExtResource("1_ejybr")
 
-[node name="DraggableComponent" parent="." unique_id=210585027 node_paths=PackedStringArray("parent", "hitbox") instance=ExtResource("2_nysfw")]
-parent = NodePath("..")
+[node name="DraggableComponent" parent="." unique_id=210585027 node_paths=PackedStringArray("hitbox", "movmentComponent") instance=ExtResource("2_nysfw")]
 hitbox = NodePath("../HitboxCover")
+movmentComponent = NodePath("../MovmentComponent")
 
-[node name="SnapComponent" type="Node2D" parent="." unique_id=1420366187 node_paths=PackedStringArray("parent", "hitbox")]
-script = ExtResource("3_xxkfc")
+[node name="SnapComponent" parent="." unique_id=1225860492 node_paths=PackedStringArray("parent", "hitbox", "dragComponent", "movmentComponent") instance=ExtResource("3_xxkfc")]
 parent = NodePath("..")
 hitbox = NodePath("../HitboxCover")
+snapPointGrupName = "CoverSnapPoint"
+dragComponent = NodePath("../DraggableComponent")
+movmentComponent = NodePath("../MovmentComponent")
+
+[node name="MovmentComponent" parent="." unique_id=216014733 instance=ExtResource("4_xdoqc")]

@@ -4,22 +4,22 @@ extends Node2D
 var velocity:= Vector2.ZERO;
 var isPickedUp:bool = false;
 var mouseInside:bool = false;
-@export var parent:Node2D;
+var parent:Node2D;
 @export var hitbox:Area2D;
+@export var movmentComponent:MovmentComponent;
 
 func _ready() -> void:
 	hitbox.mouse_entered.connect(_mouseEntered);
 	hitbox.mouse_exited.connect(_mouseeExited);
-	
+	parent = self.get_parent() 
 
-func _process(delta: float) -> void:
-
-	Dragg(delta);
-
+func _process(_delta: float) -> void:
+	Dragg();
 
 
 
-func Dragg(delta) -> void:
+
+func Dragg() -> void:
 	if mouseInside: 
 		if Input.is_action_just_pressed("Dragg"):
 			isPickedUp = true	
@@ -34,7 +34,7 @@ func Dragg(delta) -> void:
 			#drift twords mouse
 			var speed :float = min(dist_to_mouse * 10, 5000.0)
 			var dir:= Vector2.RIGHT.rotated(parent.global_position.angle_to_point(mousePos))
-			velocity = velocity.lerp(dir.normalized() * delta * speed, 0.8)
+			velocity = velocity.lerp(dir.normalized() * speed, 0.8)
 
 		else:
 			#gently slow down when neer mouse
@@ -45,7 +45,7 @@ func Dragg(delta) -> void:
 		velocity = velocity.lerp(Vector2.ZERO,0.05)
 		
 	#apply the velocity
-	parent.global_position += velocity
+	movmentComponent.setVelocity(velocity)
 
 
 

@@ -17,10 +17,15 @@ boot_splash/bg_color=Color(0.054228567, 0.098821454, 0.20068517, 1)
 boot_splash/image="uid://bmif5i7x4xtli"
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://cy6ig55pcntay"
+
 [file_customization]
 
 folder_colors={
 "res://Assets/": "yellow",
+"res://Resources/": "blue",
 "res://Scenes/": "red",
 "res://Scripts/": "green"
 }

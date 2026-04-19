@@ -2,11 +2,43 @@
 
 [ext_resource type="PackedScene" uid="uid://c5wi15ix0petl" path="res://Scenes/pot.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://d14l6rfyi83yg" path="res://Scenes/pot_cover.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dy6sgkcan5iik" path="res://Scenes/ingredient.tscn" id="3_6phgx"]
+[ext_resource type="Script" uid="uid://cxfx2pikwaw81" path="res://Scripts/labelTESTING.gd" id="4_81xng"]
+[ext_resource type="Resource" uid="uid://cqc84wtb45qw3" path="res://Resources/Ingredients/Potato.tres" id="5_wqkje"]
 
 [node name="Level" type="Node2D" unique_id=1013886309]
 
 [node name="Pot" parent="." unique_id=733976009 instance=ExtResource("1_tumq0")]
-position = Vector2(576, 322)
 
 [node name="PotCover" parent="." unique_id=171613539 instance=ExtResource("2_k5f4k")]
-position = Vector2(647, 241)
+position = Vector2(5, -126)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1345546045]
+zoom = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="." unique_id=822039537]
+offset_left = -283.0
+offset_top = -159.0
+offset_right = -211.0
+offset_bottom = -118.0
+script = ExtResource("4_81xng")
+
+[node name="Ingredient" parent="." unique_id=478603334 instance=ExtResource("3_6phgx")]
+position = Vector2(180, -85)
+
+[node name="Ingredient2" parent="." unique_id=145808714 instance=ExtResource("3_6phgx")]
+position = Vector2(98, -61)
+
+[node name="Ingredient3" parent="." unique_id=942539979 instance=ExtResource("3_6phgx")]
+position = Vector2(152, 6)
+
+[node name="Ingredient4" parent="." unique_id=1772810876 instance=ExtResource("3_6phgx")]
+position = Vector2(153, -47)
+
+[node name="Ingredient5" parent="." unique_id=197894952 instance=ExtResource("3_6phgx")]
+position = Vector2(134, 46)
+ingredient = ExtResource("5_wqkje")
+
+[node name="Ingredient6" parent="." unique_id=1055948305 instance=ExtResource("3_6phgx")]
+position = Vector2(207, 6)
+ingredient = ExtResource("5_wqkje")

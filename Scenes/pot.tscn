@@ -2,39 +2,40 @@
 
 [ext_resource type="Texture2D" uid="uid://cq8nvf4esjk7g" path="res://Assets/CookingPotLid.png" id="1_b8ggh"]
 [ext_resource type="Texture2D" uid="uid://bmif5i7x4xtli" path="res://Assets/CokkingPot.png" id="1_cc2i1"]
-[ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="3_rj0eo"]
+[ext_resource type="Script" uid="uid://mvsyrwpg4j21" path="res://Scripts/pot.gd" id="1_rj0eo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj0eo"]
-size = Vector2(64, 63.75)
+size = Vector2(20, 13.5)
 
 [node name="Pot" type="Node2D" unique_id=733976009]
-
-[node name="PotLid" type="Sprite2D" parent="." unique_id=974485262]
-visible = false
-position = Vector2(0, -40)
-texture = ExtResource("1_b8ggh")
+script = ExtResource("1_rj0eo")
 
 [node name="CokkingPot" type="Sprite2D" parent="." unique_id=1799729411]
 texture = ExtResource("1_cc2i1")
 
-[node name="HitboxPotHole" type="Area2D" parent="." unique_id=1390723991]
+[node name="HitboxPotHole" type="Area2D" parent="." unique_id=1390723991 groups=["IngredientSnapPoint"]]
+position = Vector2(0, -18)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPotHole" unique_id=426614357]
-visible = false
-position = Vector2(0, -23.5)
 shape = SubResource("RectangleShape2D_rj0eo")
 
-[node name="HitboxPotCover" type="Area2D" parent="." unique_id=1178987435 groups=["PotCoverSnapPos"]]
+[node name="snapPoint" type="Marker2D" parent="HitboxPotHole" unique_id=77523728]
+
+[node name="HitboxPotCoverSnap" type="Area2D" parent="." unique_id=1178987435 groups=["CoverSnapPoint"]]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPotCover" unique_id=1488894820]
-visible = false
-position = Vector2(0, -36.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPotCoverSnap" unique_id=1488894820]
+position = Vector2(0, -30)
 shape = SubResource("RectangleShape2D_rj0eo")
 
-[node name="CoverPos" type="Marker2D" parent="HitboxPotCover" unique_id=1271149750]
-position = Vector2(0, -40)
+[node name="snapPoint" type="Marker2D" parent="HitboxPotCoverSnap" unique_id=1271149750]
+position = Vector2(0, -28)
+
+[node name="PotLid" type="Sprite2D" parent="HitboxPotCoverSnap" unique_id=974485262]
+visible = false
+position = Vector2(0, -28)
+texture = ExtResource("1_b8ggh")
 
 [node name="HitboxPot" type="Area2D" parent="." unique_id=10312914]
 collision_mask = 0
@@ -44,6 +45,5 @@ visible = false
 position = Vector2(0, -0.125)
 shape = SubResource("RectangleShape2D_rj0eo")
 
-[node name="DraggableComponent" parent="." unique_id=210585027 node_paths=PackedStringArray("parent", "hitbox") instance=ExtResource("3_rj0eo")]
-parent = NodePath("..")
-hitbox = NodePath("../HitboxPot")
+[connection signal="area_entered" from="HitboxPotCoverSnap" to="." method="_on_hitbox_pot_cover_snap_area_entered"]
+[connection signal="area_exited" from="HitboxPotCoverSnap" to="." method="_on_hitbox_pot_cover_snap_area_exited"]
