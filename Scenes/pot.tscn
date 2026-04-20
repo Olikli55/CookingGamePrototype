@@ -3,12 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cq8nvf4esjk7g" path="res://Assets/CookingPotLid.png" id="1_b8ggh"]
 [ext_resource type="Texture2D" uid="uid://bmif5i7x4xtli" path="res://Assets/CokkingPot.png" id="1_cc2i1"]
 [ext_resource type="Script" uid="uid://mvsyrwpg4j21" path="res://Scripts/pot.gd" id="1_rj0eo"]
+[ext_resource type="Script" uid="uid://ct2ld7a7qnr0r" path="res://Scripts/ResourcesScripts/recipes_resource.gd" id="2_kvtqg"]
+[ext_resource type="Resource" uid="uid://bm5ttym18v1ly" path="res://Resources/Recipes/PotatoSoupRecipe.tres" id="3_sptmv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj0eo"]
 size = Vector2(20, 13.5)
 
 [node name="Pot" type="Node2D" unique_id=733976009]
 script = ExtResource("1_rj0eo")
+recipes = Array[ExtResource("2_kvtqg")]([ExtResource("3_sptmv")])
 
 [node name="CokkingPot" type="Sprite2D" parent="." unique_id=1799729411]
 texture = ExtResource("1_cc2i1")

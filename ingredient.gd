@@ -1,7 +1,7 @@
 
 extends Node2D
 
-@export var texture: Sprite2D
+@onready var texture: Sprite2D = $Texture
 @export var snapComponent:SnapComponent
 @export var ingredient:Ingredient;
 
@@ -10,9 +10,6 @@ func _ready() -> void:
 	Global.potOpened.connect(func(): snapComponent.enabled = true)
 	texture.texture = ingredient.texture
 
-
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_snap_component_snapped() -> void:

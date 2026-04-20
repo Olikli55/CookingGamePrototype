@@ -1,5 +1,5 @@
 class_name MovmentComponent
-extends Node2D
+extends Node
 
 var velocity:= Vector2.ZERO
 var parent:Node2D;

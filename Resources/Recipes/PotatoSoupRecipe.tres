@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="IngredientRecipe" format=3 uid="uid://bm5ttym18v1ly"]
+
+[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="1_iu0dn"]
+[ext_resource type="Resource" uid="uid://d3pe1xlukqehp" path="res://Resources/Ingredients/Carrot.tres" id="2_0jwt0"]
+[ext_resource type="Resource" uid="uid://cqc84wtb45qw3" path="res://Resources/Ingredients/Potato.tres" id="3_3roc3"]
+[ext_resource type="Resource" uid="uid://cupqscn1yyutj" path="res://Resources/Meals/PotatoSoupMeal.tres" id="4_0jwt0"]
+[ext_resource type="Script" uid="uid://ct2ld7a7qnr0r" path="res://Scripts/ResourcesScripts/recipes_resource.gd" id="4_w481t"]
+
+[resource]
+script = ExtResource("4_w481t")
+name = "Carrot and potato soup"
+ingredients = Array[ExtResource("1_iu0dn")]([ExtResource("2_0jwt0"), ExtResource("2_0jwt0"), ExtResource("3_3roc3"), ExtResource("3_3roc3")])
+output = ExtResource("4_0jwt0")
+metadata/_custom_type_script = "uid://ct2ld7a7qnr0r"

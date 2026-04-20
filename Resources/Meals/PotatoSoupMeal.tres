@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Meal" format=3 uid="uid://cupqscn1yyutj"]
+
+[ext_resource type="Script" uid="uid://csvol717v8lgf" path="res://Scripts/ResourcesScripts/meals.gd" id="1_8r3rr"]
+[ext_resource type="Texture2D" uid="uid://bug8jtn67wrxm" path="res://Assets/PotatoSoup.png" id="2_ehh8d"]
+
+[resource]
+script = ExtResource("1_8r3rr")
+texture = ExtResource("2_ehh8d")
+name = "Potato Soup"
+sellCost = 200
+metadata/_custom_type_script = "uid://csvol717v8lgf"

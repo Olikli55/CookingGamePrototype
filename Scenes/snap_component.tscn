@@ -2,7 +2,5 @@
 
 [ext_resource type="Script" uid="uid://t3aibrkvbqqw" path="res://Scripts/snap_component.gd" id="1_y5upn"]
 
-[node name="SnapComponent" type="Node2D" unique_id=1225860492 node_paths=PackedStringArray("parent", "hitbox")]
+[node name="SnapComponent" type="Node" unique_id=1429519723]
 script = ExtResource("1_y5upn")
-parent = NodePath("")
-hitbox = NodePath("")

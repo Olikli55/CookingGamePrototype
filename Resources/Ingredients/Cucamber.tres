@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://b86nv208ok6hj"]
+
+[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="1_mlj76"]
+[ext_resource type="Texture2D" uid="uid://n5ptsid1kxcn" path="res://Assets/Cucamber.png" id="2_kqr8v"]
+
+[resource]
+script = ExtResource("1_mlj76")
+texture = ExtResource("2_kqr8v")
+name = "Cucamber"
+metadata/_custom_type_script = "uid://bh3xlidkroi7r"

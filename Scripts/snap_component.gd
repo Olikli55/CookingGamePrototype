@@ -1,8 +1,8 @@
 class_name SnapComponent
-extends Node2D
+extends Node
 
 var enabled:bool = true
-@export var parent:Node2D;
+var parent:Node2D;
 @export var hitbox:Area2D;
 @export var snapPointGrupName:String;
 @export var dragComponent:DraggableComponent;
@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 	if snap: 
 		var snapPos:Vector2 = snapObject.find_child("snapPoint", false).global_position;
 		
-		if dragComponent.isPickedUp and snapPos.distance_to(get_global_mouse_position()) > 20:
+		if dragComponent.isPickedUp and snapPos.distance_to(parent.get_global_mouse_position()) > 20:
 			return
 		
 		parent.global_position = snapPos

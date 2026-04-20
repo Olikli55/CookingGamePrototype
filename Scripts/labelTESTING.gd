@@ -7,5 +7,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	text = str(Global.itemListInPot) + str(Global.isPotClosed)
+func _process(_delta: float) -> void:
+	text = str(Global.itemListInPot)

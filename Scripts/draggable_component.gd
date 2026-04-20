@@ -1,5 +1,5 @@
 class_name DraggableComponent
-extends Node2D
+extends Node
 
 var velocity:= Vector2.ZERO;
 var isPickedUp:bool = false;
@@ -28,7 +28,7 @@ func Dragg() -> void:
 		if Input.is_action_just_released("Dragg"):isPickedUp = false;
 		
 		
-		var mousePos:= get_global_mouse_position()
+		var mousePos:= parent.get_global_mouse_position()
 		var dist_to_mouse: = parent.global_position.distance_to(mousePos)
 		if dist_to_mouse > 6.0:
 			#drift twords mouse

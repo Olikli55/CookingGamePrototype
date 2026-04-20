@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://io2l5bpbjfaf" path="res://Scripts/movment_component.gd" id="1_0lyj7"]
 
-[node name="MovmentComponent" type="Node2D" unique_id=216014733]
+[node name="MovmentComponent" type="Node" unique_id=545063129]
 script = ExtResource("1_0lyj7")

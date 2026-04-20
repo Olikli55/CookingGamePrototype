@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dqsv5tvm5gxf3"]
+
+[ext_resource type="Script" uid="uid://3o8n3u62pw5s" path="res://Scripts/meal.gd" id="1_0hskh"]
+[ext_resource type="Texture2D" uid="uid://bug8jtn67wrxm" path="res://Assets/PotatoSoup.png" id="2_0hskh"]
+[ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="3_j4rbo"]
+[ext_resource type="PackedScene" uid="uid://cwrsvkjxxyphm" path="res://Scenes/movment_component.tscn" id="5_vtu7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1bdj"]
+size = Vector2(32, 16)
+
+[node name="Meal" type="Node2D" unique_id=32901217]
+script = ExtResource("1_0hskh")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=752529201]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_0hskh")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1011764974]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1202575539]
+visible = false
+shape = SubResource("RectangleShape2D_h1bdj")
+
+[node name="DraggableComponent" parent="." unique_id=906568239 node_paths=PackedStringArray("hitbox", "movmentComponent") instance=ExtResource("3_j4rbo")]
+hitbox = NodePath("../Hitbox")
+movmentComponent = NodePath("../MovmentComponent")
+
+[node name="MovmentComponent" parent="." unique_id=545063129 instance=ExtResource("5_vtu7g")]
