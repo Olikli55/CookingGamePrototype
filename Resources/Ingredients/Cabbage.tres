@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://dpx0pj35r2p6f"]
+
+[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="1_le4dr"]
+[ext_resource type="Texture2D" uid="uid://bdej81jm7i3yx" path="res://Assets/Vegetable/Cabbage.png" id="2_8p2e2"]
+
+[resource]
+script = ExtResource("1_le4dr")
+texture = ExtResource("2_8p2e2")
+name = "Cabbage"
+metadata/_custom_type_script = "uid://bh3xlidkroi7r"

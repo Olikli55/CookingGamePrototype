@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dofw8e5wd7l6y"
-path="res://.godot/imported/Carrot.png-b3763d99ba1c59a451f95943ebb08c56.ctex"
+uid="uid://n5ptsid1kxcn"
+path="res://.godot/imported/Cucamber.png-a043a9cc765094cb3b831680fbb7dae6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Carrot.png"
-dest_files=["res://.godot/imported/Carrot.png-b3763d99ba1c59a451f95943ebb08c56.ctex"]
+source_file="res://Assets/Vegetable/Cucamber.png"
+dest_files=["res://.godot/imported/Cucamber.png-a043a9cc765094cb3b831680fbb7dae6.ctex"]
 
 [params]
 

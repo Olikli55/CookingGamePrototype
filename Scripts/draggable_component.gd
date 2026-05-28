@@ -22,10 +22,17 @@ func _process(_delta: float) -> void:
 func Dragg() -> void:
 	if mouseInside: 
 		if Input.is_action_just_pressed("Dragg"):
-			isPickedUp = true	
+			isPickedUp = true
 	
 	if isPickedUp:
-		if Input.is_action_just_released("Dragg"):isPickedUp = false;
+		if Input.is_action_just_released("Dragg"):
+			isPickedUp = false;
+			var overlappingAreas:= hitbox.get_overlapping_areas();
+			if overlappingAreas.size() > 0:
+				print(overlappingAreas.size());
+				var dir: = Vector2.RIGHT.rotated(randf_range(0, TAU));
+				velocity = dir.normalized() * 1000
+				print("velocity: ", velocity)
 		
 		
 		var mousePos:= parent.get_global_mouse_position()
@@ -38,7 +45,7 @@ func Dragg() -> void:
 
 		else:
 			#gently slow down when neer mouse
-			velocity = velocity.lerp(Vector2.ZERO, 1)
+			velocity = velocity.lerp(Vector2.ZERO, 0.8)
 		
 	else:
 		#slow down when the object is put down

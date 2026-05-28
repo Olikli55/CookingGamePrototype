@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bug8jtn67wrxm"
-path="res://.godot/imported/PotatoSoup.png-1efacb79421781279841158af76c4de2.ctex"
+uid="uid://dkbuwf620y8yw"
+path="res://.godot/imported/ButteredBroccoliMash.png-b2b5f1a7f2759bb748c2d5926116e0df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PotatoSoup.png"
-dest_files=["res://.godot/imported/PotatoSoup.png-1efacb79421781279841158af76c4de2.ctex"]
+source_file="res://Assets/Meals/ButteredBroccoliMash.png"
+dest_files=["res://.godot/imported/ButteredBroccoliMash.png-b2b5f1a7f2759bb748c2d5926116e0df.ctex"]
 
 [params]
 

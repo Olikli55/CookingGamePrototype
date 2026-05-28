@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5xukj365oqnq"]
+
+[ext_resource type="Script" uid="uid://blf1v85hwupw4" path="res://Scripts/ingredients_spawn.gd" id="1_roiqu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_roiqu"]
+radius = 16.03122
+
+[node name="IngredientsSpawn" type="Node2D" unique_id=1709327713 node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_roiqu")
+hitbox = NodePath("Hitbox")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2122881132]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1482852803]
+shape = SubResource("CircleShape2D_roiqu")

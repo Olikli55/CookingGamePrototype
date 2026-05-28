@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://de03ny40hyxm0"]
+
+[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="1_7cmaq"]
+[ext_resource type="Texture2D" uid="uid://c1n2ktxeqtyjc" path="res://Assets/Vegetable/Broccoli.png" id="2_jcbl1"]
+
+[resource]
+script = ExtResource("1_7cmaq")
+texture = ExtResource("2_jcbl1")
+name = "Broccoli"
+metadata/_custom_type_script = "uid://bh3xlidkroi7r"

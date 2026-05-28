@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://d14l6rfyi83yg" path="res://Scenes/pot_cover.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dy6sgkcan5iik" path="res://Scenes/ingredient.tscn" id="3_6phgx"]
 [ext_resource type="Script" uid="uid://cxfx2pikwaw81" path="res://Scripts/labelTESTING.gd" id="4_81xng"]
-[ext_resource type="Resource" uid="uid://kps1i8aoyago" path="res://Resources/Ingredients/Tomato.tres" id="5_0f350"]
-[ext_resource type="Resource" uid="uid://b86nv208ok6hj" path="res://Resources/Ingredients/Cucamber.tres" id="5_8c0lf"]
-[ext_resource type="Resource" uid="uid://cqc84wtb45qw3" path="res://Resources/Ingredients/Potato.tres" id="5_wqkje"]
 
 [node name="Level" type="Node2D" unique_id=1013886309]
 
@@ -17,7 +14,7 @@ mealsObjects = NodePath("../Meals")
 position = Vector2(5, -126)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1345546045]
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
 
 [node name="Label" type="Label" parent="." unique_id=822039537]
 offset_left = -283.0
@@ -30,66 +27,90 @@ script = ExtResource("4_81xng")
 
 [node name="Ingredient1" parent="Ingredients" unique_id=478603334 instance=ExtResource("3_6phgx")]
 position = Vector2(180, -85)
-ingredient = ExtResource("5_8c0lf")
+ingredient = null
+
+[node name="Ingredient18" parent="Ingredients" unique_id=280636291 instance=ExtResource("3_6phgx")]
+position = Vector2(180, -85)
+ingredient = null
+
+[node name="Ingredient19" parent="Ingredients" unique_id=506166748 instance=ExtResource("3_6phgx")]
+position = Vector2(180, -85)
+ingredient = null
+
+[node name="Ingredient20" parent="Ingredients" unique_id=1402983153 instance=ExtResource("3_6phgx")]
+position = Vector2(180, -85)
+ingredient = null
+
+[node name="Ingredient21" parent="Ingredients" unique_id=1552677834 instance=ExtResource("3_6phgx")]
+position = Vector2(180, -85)
+ingredient = null
 
 [node name="Ingredient2" parent="Ingredients" unique_id=145808714 instance=ExtResource("3_6phgx")]
 position = Vector2(98, -61)
+ingredient = null
 
 [node name="Ingredient3" parent="Ingredients" unique_id=942539979 instance=ExtResource("3_6phgx")]
 position = Vector2(152, 6)
+ingredient = null
 
 [node name="Ingredient4" parent="Ingredients" unique_id=1772810876 instance=ExtResource("3_6phgx")]
 position = Vector2(153, -47)
-ingredient = ExtResource("5_0f350")
+ingredient = null
 
 [node name="Ingredient5" parent="Ingredients" unique_id=197894952 instance=ExtResource("3_6phgx")]
 position = Vector2(134, 46)
-ingredient = ExtResource("5_8c0lf")
+ingredient = null
 
 [node name="Ingredient6" parent="Ingredients" unique_id=1055948305 instance=ExtResource("3_6phgx")]
 position = Vector2(-61, -84)
-ingredient = ExtResource("5_0f350")
+ingredient = null
 
 [node name="Ingredient7" parent="Ingredients" unique_id=1366028790 instance=ExtResource("3_6phgx")]
-position = Vector2(229, -75)
-ingredient = ExtResource("5_wqkje")
+position = Vector2(244, -133)
+ingredient = null
 
 [node name="Ingredient8" parent="Ingredients" unique_id=1762381609 instance=ExtResource("3_6phgx")]
 position = Vector2(26, -73)
-ingredient = ExtResource("5_wqkje")
+ingredient = null
 
 [node name="Ingredient9" parent="Ingredients" unique_id=653693429 instance=ExtResource("3_6phgx")]
 position = Vector2(75, 73)
-ingredient = ExtResource("5_wqkje")
+ingredient = null
 
 [node name="Ingredient10" parent="Ingredients" unique_id=2013481237 instance=ExtResource("3_6phgx")]
 position = Vector2(-142, 59)
-ingredient = ExtResource("5_0f350")
+ingredient = null
 
 [node name="Ingredient11" parent="Ingredients" unique_id=1008538584 instance=ExtResource("3_6phgx")]
 position = Vector2(-72, 90)
+ingredient = null
 
 [node name="Ingredient12" parent="Ingredients" unique_id=1181338110 instance=ExtResource("3_6phgx")]
 position = Vector2(228, 110)
-ingredient = ExtResource("5_wqkje")
+ingredient = null
 
 [node name="Ingredient13" parent="Ingredients" unique_id=1122846072 instance=ExtResource("3_6phgx")]
 position = Vector2(-178, -37)
-ingredient = ExtResource("5_8c0lf")
+ingredient = null
 
 [node name="Ingredient14" parent="Ingredients" unique_id=602675198 instance=ExtResource("3_6phgx")]
 position = Vector2(20, 103)
-ingredient = ExtResource("5_wqkje")
+ingredient = null
 
 [node name="Ingredient15" parent="Ingredients" unique_id=36953891 instance=ExtResource("3_6phgx")]
 position = Vector2(-145, -88)
-ingredient = ExtResource("5_0f350")
+ingredient = null
 
 [node name="Ingredient16" parent="Ingredients" unique_id=1727466140 instance=ExtResource("3_6phgx")]
 position = Vector2(142, 108)
+ingredient = null
 
 [node name="Ingredient17" parent="Ingredients" unique_id=1323552018 instance=ExtResource("3_6phgx")]
-position = Vector2(226, 5)
-ingredient = ExtResource("5_8c0lf")
+position = Vector2(-232, 133)
+ingredient = null
 
 [node name="Meals" type="Node2D" parent="." unique_id=1629945370]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=50544807]
+
+[node name="Node2D" type="Node2D" parent="SpawnPoints" unique_id=551971299]

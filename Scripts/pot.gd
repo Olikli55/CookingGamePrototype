@@ -23,14 +23,13 @@ func _on_hitbox_pot_cover_snap_area_exited(area: Area2D) -> void:
 func cook() -> void:
 	for recipe:IngredientRecipe in recipes:
 		if recipe.ingredients.size() != Global.itemListInPot.size():
-			print("sorry wrong recipe");
-			print(Global.itemListInPot);
-			return;
+			continue;
 		for ingredient:Ingredient in recipe.ingredients:
 			if not Global.itemListInPot.has(ingredient.name):
-				print("sorry wrong recipe");
+				print("sorry wrong recipe", ingredient.name);
 				print(Global.itemListInPot);
-				return;
+				continue;
+			
 			
 		print("coocked: ", recipe.name);
 		var mealObject:MealObject = mealScene.instantiate();
@@ -38,3 +37,4 @@ func cook() -> void:
 		await get_tree().process_frame
 		mealsObjects.add_child(mealObject)
 		Global.itemListInPot.clear()
+	print("worng recipe")

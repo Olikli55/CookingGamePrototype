@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqsv5tvm5gxf3"]
 
 [ext_resource type="Script" uid="uid://3o8n3u62pw5s" path="res://Scripts/meal.gd" id="1_0hskh"]
-[ext_resource type="Texture2D" uid="uid://bug8jtn67wrxm" path="res://Assets/PotatoSoup.png" id="2_0hskh"]
+[ext_resource type="Texture2D" uid="uid://bug8jtn67wrxm" path="res://Assets/Meals/PotatoSoup.png" id="2_0hskh"]
 [ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="3_j4rbo"]
 [ext_resource type="PackedScene" uid="uid://cwrsvkjxxyphm" path="res://Scenes/movment_component.tscn" id="5_vtu7g"]
 

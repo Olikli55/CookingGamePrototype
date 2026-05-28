@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://dqulpglpwh4v2"]
+
+[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="1_58gax"]
+[ext_resource type="Texture2D" uid="uid://cag78b1nc6imy" path="res://Assets/Vegetable/Pumpking.png" id="2_2g1m0"]
+
+[resource]
+script = ExtResource("1_58gax")
+texture = ExtResource("2_2g1m0")
+name = "Pumpkin"
+metadata/_custom_type_script = "uid://bh3xlidkroi7r"

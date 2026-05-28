@@ -42,5 +42,4 @@ func _areaEntered(area:Area2D) -> void:
 	if area.get_groups().has(snapPointGrupName) and enabled and dragComponent.isPickedUp:
 		snap = true;
 		snapObject = area;
-		print("ff")
 		

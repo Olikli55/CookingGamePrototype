@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t4wc06ltsc0t"
-path="res://.godot/imported/Potato.png-413b7ce0eaa1ba2fa62dd5f0a428622e.ctex"
+uid="uid://bdej81jm7i3yx"
+path="res://.godot/imported/Cabbage.png-c9571e956760f96c937d8f99421acbff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Potato.png"
-dest_files=["res://.godot/imported/Potato.png-413b7ce0eaa1ba2fa62dd5f0a428622e.ctex"]
+source_file="res://Assets/Vegetable/Cabbage.png"
+dest_files=["res://.godot/imported/Cabbage.png-c9571e956760f96c937d8f99421acbff.ctex"]
 
 [params]
 
