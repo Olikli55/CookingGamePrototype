@@ -13,26 +13,26 @@
 [ext_resource type="Resource" uid="uid://dpx0pj35r2p6f" path="res://Resources/Ingredients/Cabbage.tres" id="11_vofx3"]
 [ext_resource type="Resource" uid="uid://dqulpglpwh4v2" path="res://Resources/Ingredients/Pumpkin.tres" id="12_00k4y"]
 [ext_resource type="Resource" uid="uid://b86nv208ok6hj" path="res://Resources/Ingredients/Cucamber.tres" id="13_3a44l"]
+[ext_resource type="Texture2D" uid="uid://uvregtngpt00" path="res://Assets/RecipeSheet.png" id="14_c7le1"]
 [ext_resource type="Texture2D" uid="uid://dqxsoj1lcsi5w" path="res://Assets/Background.png" id="14_crh0w"]
 
 [node name="Level" type="Node2D" unique_id=1013886309]
 
 [node name="Pot" parent="." unique_id=733976009 node_paths=PackedStringArray("mealsObjects") instance=ExtResource("1_tumq0")]
+position = Vector2(20, 73)
 mealsObjects = NodePath("../Meals")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pot" unique_id=2100955129]
-
 [node name="PotCover" parent="." unique_id=171613539 instance=ExtResource("2_k5f4k")]
-position = Vector2(5, -126)
+position = Vector2(150, 121)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1345546045]
 zoom = Vector2(4, 4)
 
 [node name="Label" type="Label" parent="." unique_id=822039537]
-offset_left = -229.0
-offset_top = -128.0
-offset_right = -157.0
-offset_bottom = -87.0
+offset_left = 165.0
+offset_top = -133.0
+offset_right = 237.0
+offset_bottom = -92.0
 script = ExtResource("4_81xng")
 
 [node name="Ingredients" type="Node2D" parent="." unique_id=922630110]
@@ -74,8 +74,13 @@ position = Vector2(-165, -7)
 ingredientResource = ExtResource("12_00k4y")
 
 [node name="IngredientsSpawn9" parent="SpawnPoints" unique_id=1069893660 instance=ExtResource("5_0f350")]
-position = Vector2(-133, -5)
+position = Vector2(-131, -7)
 ingredientResource = ExtResource("13_3a44l")
+
+[node name="RecipeSheet" type="Sprite2D" parent="SpawnPoints" unique_id=1393226749]
+position = Vector2(160, -40)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_c7le1")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1793184603]
 z_index = -6

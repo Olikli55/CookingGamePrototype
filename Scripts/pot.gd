@@ -8,9 +8,9 @@ func _ready() -> void:
 
 
 
-
+#@todo the food coocks even when the pot is nor released !!!!!!!
 func _on_hitbox_pot_cover_snap_area_entered(area: Area2D) -> void:
-	if area.get_parent().get_groups().has("PotCover"):
+	if area.get_parent().get_groups().has("PotCover") and Input.is_action_pressed("Dragg") == false:
 		Global.potClosed.emit()
 		cook()
 
