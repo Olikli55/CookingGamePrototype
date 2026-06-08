@@ -14,7 +14,7 @@ config/name="CookingRPG"
 run/main_scene="uid://c3gqibfbidq5q"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.054228567, 0.098821454, 0.20068517, 1)
-boot_splash/image="uid://bmif5i7x4xtli"
+boot_splash/image="uid://t4wc06ltsc0t"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,8 +25,12 @@ Global="*uid://cy6ig55pcntay"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
+window/stretch/mode="canvas_items"
+window/stretch/scale=2.0
+
+[dotnet]
+
+project/assembly_name="CookingRPG"
 
 [file_customization]
 

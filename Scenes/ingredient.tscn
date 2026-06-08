@@ -5,16 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://sopnhvwqr008" path="res://Scenes/draggable_component.tscn" id="2_pc44i"]
 [ext_resource type="Texture2D" uid="uid://t4wc06ltsc0t" path="res://Assets/Vegetable/Potato.png" id="3_dii2p"]
 [ext_resource type="PackedScene" uid="uid://dksjqvol5yloi" path="res://Scenes/snap_component.tscn" id="3_pc44i"]
-[ext_resource type="Script" uid="uid://bh3xlidkroi7r" path="res://Scripts/ResourcesScripts/ingredient_resource.gd" id="3_pw1uj"]
-[ext_resource type="Resource" uid="uid://cqc84wtb45qw3" path="res://Resources/Ingredients/Potato.tres" id="4_g5ovv"]
-[ext_resource type="Resource" uid="uid://dulwx7jo8jy53" path="res://Resources/Ingredients/Corn.tres" id="5_4mn7r"]
 [ext_resource type="PackedScene" uid="uid://cwrsvkjxxyphm" path="res://Scenes/movment_component.tscn" id="5_ww4r6"]
-[ext_resource type="Resource" uid="uid://kps1i8aoyago" path="res://Resources/Ingredients/Tomato.tres" id="6_y0cqo"]
-[ext_resource type="Resource" uid="uid://dpx0pj35r2p6f" path="res://Resources/Ingredients/Cabbage.tres" id="7_jcdt4"]
-[ext_resource type="Resource" uid="uid://dqulpglpwh4v2" path="res://Resources/Ingredients/Pumpkin.tres" id="8_ojbxu"]
-[ext_resource type="Resource" uid="uid://de03ny40hyxm0" path="res://Resources/Ingredients/Broccoli.tres" id="9_x6a7c"]
-[ext_resource type="Resource" uid="uid://b86nv208ok6hj" path="res://Resources/Ingredients/Cucamber.tres" id="10_hg3yj"]
-[ext_resource type="Resource" uid="uid://byvqou4e0tfw2" path="res://Resources/Ingredients/Butter.tres" id="11_g5ovv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp2j4"]
 size = Vector2(32, 20)
@@ -23,7 +14,6 @@ size = Vector2(32, 20)
 script = ExtResource("1_vp2j4")
 snapComponent = NodePath("SnapComponent")
 ingredient = ExtResource("2_dii2p")
-randomResourcesArray = Array[ExtResource("3_pw1uj")]([ExtResource("4_g5ovv"), ExtResource("2_dii2p"), ExtResource("5_4mn7r"), ExtResource("6_y0cqo"), ExtResource("7_jcdt4"), ExtResource("8_ojbxu"), ExtResource("9_x6a7c"), ExtResource("10_hg3yj"), ExtResource("11_g5ovv")])
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1591209235]
 scale = Vector2(0.8, 0.8)

@@ -30,8 +30,6 @@ func _process(_delta: float) -> void:
 		parent.global_position = snapPos
 		if Input.is_action_just_released("Dragg"): snapped.emit()
 		
-		
-
 
 
 func _areaExited(area:Area2D) -> void:

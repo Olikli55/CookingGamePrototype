@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Meal" format=3 uid="uid://chnvun3hqx5g6"]
 
-[ext_resource type="Script" uid="uid://csvol717v8lgf" path="res://Scripts/ResourcesScripts/meals.gd" id="1_vcnu6"]
+[ext_resource type="Script" uid="uid://csvol717v8lgf" path="res://Scripts/ResourcesScripts/meals_resource.gd" id="1_vcnu6"]
 [ext_resource type="Texture2D" uid="uid://dkbuwf620y8yw" path="res://Assets/Meals/ButteredBroccoliMash.png" id="2_gwunr"]
 
 [resource]

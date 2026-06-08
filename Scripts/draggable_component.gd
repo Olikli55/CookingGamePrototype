@@ -29,10 +29,8 @@ func Dragg() -> void:
 			isPickedUp = false;
 			var overlappingAreas:= hitbox.get_overlapping_areas();
 			if overlappingAreas.size() > 0:
-				print(overlappingAreas.size());
 				var dir: = Vector2.RIGHT.rotated(randf_range(0, TAU));
-				velocity = dir.normalized() * 1000
-				print("velocity: ", velocity)
+				velocity = dir.normalized() * 400
 		
 		
 		var mousePos:= parent.get_global_mouse_position()
